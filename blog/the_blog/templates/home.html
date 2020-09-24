@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block title %}
+Home page
+{% endblock %}
+
 {% block content %}
 <!doctype html>
 <html>
@@ -16,7 +21,6 @@
     <li><a href="{% url 'article details' post.pk %}" style="color:#C0C0C0">{{post.title}}</a> -
         {{post.author.first_name}}
         {{post.author.last_name}} - {{post.author.email}}<br/>
-        {{post.body}}
     </li>
     {% endfor %}
 </ul>

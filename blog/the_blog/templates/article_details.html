@@ -1,4 +1,9 @@
 {% extends 'base.html' %}
+
+{% block title %}
+{{post.title_tag}}
+{% endblock %}
+
 {% block content %}
 <!doctype html>
 <html>
@@ -25,7 +30,7 @@
 <hr>
 <big style="color:#808080">{{ post.body }}</big>
 <hr>
-<a href="{% url 'home' %}" style="color:#C0C0C0">Back</a>
+<a href="{% url 'home' %}" style="color:#C0C0C0" class="btn btn-secondary">Back</a>
 </body>
 
 </html>
