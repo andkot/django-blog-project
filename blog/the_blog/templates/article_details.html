@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+<!doctype html>
+<html>
+
+<meta charset="utf-8">
+<style>
+   body{
+    background-color: #000000; /* Цвет фона веб-страницы */
+   }
+   hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: grey; /* Цвет линии для остальных браузеров */
+    background-color: grey; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+   }
+
+</style>
+
+<body>
+<h1 style="color:#808080">{{ post.title }}</h1>
+<small style="color:#808080">
+    By: {{post.author.first_name}} {{post.author.last_name}}<br/>
+</small>
+<hr>
+<big style="color:#808080">{{ post.body }}</big>
+<hr>
+<a href="{% url 'home' %}" style="color:#C0C0C0">Back</a>
+</body>
+
+</html>
+{% endblock %}
+
+
