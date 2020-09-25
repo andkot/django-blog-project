@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Create a new blog post
+Update blog post
 {% endblock %}
 
 {% block content %}
@@ -16,13 +16,14 @@ Create a new blog post
 
 </style>
 <body>
-<h1 style="color:#808080">Add post</h1>
+<h1 style="color:#808080">Update post</h1>
 <div class="form-group">
     <form method="POST" style="color:#808080">
         {% csrf_token %}
         {{ form.as_p }}
 </div>
-<button class="btn btn-secondary">Add post</button>
+<button class="btn btn-secondary">Update</button>
+
 
 </body>
 

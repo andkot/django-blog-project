@@ -25,12 +25,14 @@
 <body>
 <h1 style="color:#808080">{{ post.title }}</h1>
 <small style="color:#808080">
-    By: {{post.author.first_name}} {{post.author.last_name}}<br/>
+    By: {{post.author.first_name}} {{post.author.last_name}}; {{post.creating_date}}<br/>
 </small>
 <hr>
 <big style="color:#808080">{{ post.body }}</big>
 <hr>
 <a href="{% url 'home' %}" style="color:#C0C0C0" class="btn btn-secondary">Back</a>
+<a href="{% url 'update post' post.pk %}" style="color:#C0C0C0" class="btn btn-secondary">Update</a>
+<a href="{% url 'delete post' post.pk %}" style="color:#C0C0C0" class="btn btn-secondary">Delete</a>
 </body>
 
 </html>
