@@ -15,6 +15,7 @@ Delete blog post
 
 
 </style>
+{% if user.is_authenticated %}
 <body>
 <h1 style="color:#808080">Delete: {{ post.title }}</h1>
 <div class="form-group">
@@ -27,6 +28,9 @@ Delete blog post
 
 
 </body>
+{% endif %}
+
+<h1 style="color:#808080">You're not allowed here!</h1>
 
 </html>
 {% endblock %}
