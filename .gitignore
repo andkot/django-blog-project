@@ -15,3 +15,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 *.pyc
+blog/blog/__pycache__
+blog/blog/__pycache__
+blog/the_blog/migrations/__pycache__
