@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Delete blog post
+Login
 {% endblock %}
 
 {% block content %}
@@ -16,15 +16,13 @@ Delete blog post
 
 </style>
 <body>
-<h1 style="color:#808080">Delete: {{ post.title }}</h1>
+<h1 style="color:#808080">Login</h1>
 <div class="form-group">
     <form method="POST" style="color:#808080">
         {% csrf_token %}
-        <strong>Are you sure?</strong></br>
+        {{ form.as_p }}
 </div>
-<button class="btn btn-secondary" style="color:#C0C0C0">Delete</button>
-<a href="{% url 'article details' post.pk %}" style="color:#C0C0C0" class="btn btn-secondary">Back</a>
-
+<button class="btn btn-secondary">Login</button>
 
 </body>
 
