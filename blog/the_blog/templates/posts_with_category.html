@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Home page
+
 {% endblock %}
 
 {% block content %}
@@ -15,11 +15,12 @@ Home page
 
 </style>
 <body>
-<h1 style="color:#808080">Posts</h1>
+<h1 style="color:#808080">Posts with category {{category_name}}</h1>
 
-<ul style="color:#808080">{% for post in object_list %}
+<ul style="color:#808080">
+
+    <ul style="color:#808080">{% for post in posts_with_category %}
     <li><a href="{% url 'article details' post.pk %}" style="color:#C0C0C0">{{post.title}}</a> -
-        <a href="{% url 'posts with category' post.category %}" style="color:#C0C0C0">{{post.category}}</a> -
         {{post.author.first_name}}
         {{post.author.last_name}} - {{post.author.email}}; {{post.creating_date}}
         </br>
@@ -30,6 +31,7 @@ Home page
         {% endif %}
     </li>
     {% endfor %}
+
 </ul>
 </body>
 

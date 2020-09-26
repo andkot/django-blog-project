@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Categories
+{% endblock %}
+
+{% block content %}
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<style>
+   body{
+    background-color: #000000; /* Цвет фона веб-страницы */
+   }
+
+</style>
+<body>
+<h1 style="color:#808080">Categories</h1>
+{% for category in object_list %}
+    <li style="color:#808080"> {{category.name}}
+    <a href="{% url 'posts with category' category.name %}" style="color:#C0C0C0">Posts</a>
+    </li>
+
+
+{% endfor %}
+<ul style="color:#808080">
+</ul>
+</body>
+
+</html>
+{% endblock %}
