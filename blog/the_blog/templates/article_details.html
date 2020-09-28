@@ -29,6 +29,9 @@
 </small>
 <hr>
 <big style="color:#808080">{{ post.body }}</big>
+{% if post.image %}
+    <img src="/media/{{post.image}}" alt="Girl in a jacket">
+{% endif %}
 <hr>
 <a href="{% url 'home' %}" style="color:#C0C0C0" class="btn btn-secondary">Back</a>
 {% if user.is_authenticated %}

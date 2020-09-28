@@ -18,7 +18,7 @@ Categories
 <h1 style="color:#808080">Categories</h1>
 {% for category in object_list %}
     <li style="color:#808080"> {{category.name}}
-    <a href="{% url 'posts with category' category.name %}" style="color:#C0C0C0">Posts</a>
+    <a href="{% url 'posts with category' category.pk %}" style="color:#C0C0C0">Posts</a>
     </li>
 
 

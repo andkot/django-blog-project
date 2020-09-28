@@ -19,7 +19,7 @@ Home page
 
 <ul style="color:#808080">{% for post in object_list %}
     <li><a href="{% url 'article details' post.pk %}" style="color:#C0C0C0">{{post.title}}</a> -
-        <a href="{% url 'posts with category' post.category %}" style="color:#C0C0C0">{{post.category}}</a> -
+        <a href="{% url 'posts with category' post.category.pk %}" style="color:#C0C0C0">{{post.category.name}}</a> -
         {{post.author.first_name}}
         {{post.author.last_name}} - {{post.author.email}}; {{post.creating_date}}
         </br>

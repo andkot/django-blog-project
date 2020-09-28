@@ -19,11 +19,13 @@ Update blog post
 <body>
 <h1 style="color:#808080">Update post</h1>
 <div class="form-group">
-    <form method="POST" style="color:#808080">
+    <form method="POST" style="color:#808080" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
+        <button class="btn btn-secondary">Update</button>
+    </form>
 </div>
-<button class="btn btn-secondary">Update</button>
+
 {% else %}
 <h1 style="color:#808080">You're not allowed here!</h1>
 {% endif %}

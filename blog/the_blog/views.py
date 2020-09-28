@@ -11,10 +11,10 @@ class HomeView(ListView):
     ordering = ['creating_date']
 
 
-def get_posts_with_category(request, category_name):
-    posts_with_category = Post.objects.filter(category=category_name)
+def get_posts_with_category(request, pk):
     return render(request, 'posts_with_category.html',
-                  {'posts_with_category': posts_with_category, 'category_name': category_name})
+                  {'posts_with_category': Post.objects.filter(category=pk), 'category_pk': pk,
+                   'category_name': Category.objects.get(pk=pk)})
 
 
 class CategoriesView(ListView):
